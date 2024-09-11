@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.amrk000.yajhaz.view.fragments.SignIn"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signIn_to_signUp"
+            app:destination="@id/signUp"
+            app:enterAnim="@anim/slide_from_bottom"
+            app:exitAnim="@anim/slide_to_bottom" />
+        <action
+            android:id="@+id/action_signIn_to_home"
+            app:destination="@id/home"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_to_bottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="com.amrk000.yajhaz.view.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_signIn"
+            app:destination="@id/signIn"
+            app:enterAnim="@anim/slide_from_bottom"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.amrk000.yajhaz.view.fragments.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_signIn"
+            app:destination="@id/signIn"
+            app:enterAnim="@anim/slide_from_bottom"
+            app:exitAnim="@anim/slide_to_bottom" />
+    </fragment>
+</navigation>

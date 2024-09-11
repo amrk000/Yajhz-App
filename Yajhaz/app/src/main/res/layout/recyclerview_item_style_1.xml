@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:layout_rowWeight="1"
+    android:layout_margin="5dp"
+    android:layout_weight="1"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="?attr/background"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="1.5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_style1_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sign_background" />
+
+        <CheckBox
+            android:id="@+id/item_style1_favorite"
+            style="0"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/add_favorite_button"
+            android:backgroundTintMode="multiply"
+            android:button="@null"
+            android:checked="false"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_style1_image" />
+
+        <View
+            android:id="@+id/item_style1_dim"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="#99000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/item_style1_Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="Title Text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/item_style1_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/item_style1_image"
+            app:layout_constraintTop_toTopOf="@+id/item_style1_dim" />
+
+        <TextView
+            android:id="@+id/item_style1_Distance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="00 Km"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/item_style1_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/item_style1_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/item_style1_Name" />
+
+        <ImageView
+            android:id="@+id/item_style1_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="@+id/item_style1_Distance"
+            app:layout_constraintStart_toStartOf="@+id/item_style1_Name"
+            app:layout_constraintTop_toTopOf="@+id/item_style1_Distance"
+            app:srcCompat="@drawable/rounded_distance_24"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/item_style1_Rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="0.0"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/item_style1_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/item_style1_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/item_style1_Distance" />
+
+        <ImageView
+            android:id="@+id/item_style1_imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="@+id/item_style1_Rating"
+            app:layout_constraintStart_toStartOf="@+id/item_style1_Name"
+            app:layout_constraintTop_toTopOf="@+id/item_style1_Rating"
+            app:srcCompat="@drawable/round_rating_star_24"
+            app:tint="?attr/colorPrimary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

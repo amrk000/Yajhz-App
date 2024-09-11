@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Yajhaz" parent="Theme.Material3.Light.NoActionBar">
+        <item name="background">@color/white</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Splash Screen -->
+        <item name="android:windowSplashScreenBehavior" tools:targetApi="33">icon_preferred</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="32">@color/primary</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="32">@drawable/splash_icon</item>
+    </style>
+
+    <style name="Theme.Yajhaz" parent="Base.Theme.Yajhaz" />
+</resources>

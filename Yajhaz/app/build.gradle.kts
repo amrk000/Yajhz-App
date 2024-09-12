@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -19,6 +21,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
+        //build config api key
+        val properties = Properties()
+        properties.load(File("local.properties").inputStream())
+        //add api url in local.properties as BASE_URL
+        buildConfigField("String", "BASE_URL", properties.getProperty("BASE_URL"))
     }
 
     buildTypes {
@@ -43,7 +50,9 @@ android {
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
+
 }
 
 kapt {

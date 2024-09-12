@@ -1,5 +1,6 @@
 package com.amrk000.yajhaz.di.module
 
+import com.amrk000.yajhaz.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,7 +12,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class RetrofitModule {
-    private val BASE_URL = "https://yogahez.mountasher.online/api/"
+    private val BASE_URL = BuildConfig.BASE_URL //add api url in local.properties as BASE_URL
 
     @Provides
     @Singleton

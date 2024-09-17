@@ -2,13 +2,14 @@
 ## by Amr Elkasaby
 
 ### start date: 9/9/2024 at 2:00PM
-### end dat: 11/9/2024 at 4:00PM
+### end date: 11/9/2024 at 4:00PM
 ---
 ## Download Apk Demo:
-https://drive.google.com/file/d/1aNO3fOj2mTy7zOT9HQc8p8JP_dcR9RXv/view?usp=sharing
+https://www.dropbox.com/scl/fi/zxv3d758zphvcxu50enam/Yajhaz-App-by-Amr-Elkasaby.apk?rlkey=5ly21baec19q00mb5vo0cqo7b&st=v6v2ey8r&dl=0
 
 ## Video Demo:
 https://www.youtube.com/watch?v=eCEpulPN4wA
+<<<<<<< HEAD
 
 ## API URL is secured in Local.properties
 Add this line to the file before running the project so BuildConfig can read it
@@ -16,3 +17,5 @@ Add this line to the file before running the project so BuildConfig can read it
 # Base Url
 BASE_URL = "URL"
 ```
+=======
+>>>>>>> origin/master
